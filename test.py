@@ -17,7 +17,7 @@ for x in game:
                 solution.append(location + 5)
 print(solution)
 """
-
+"""
 row1 = list(map(int, input("row #1: ").split()))
 row2 = list(map(int, input("row #2: ").split()))
 row3 = list(map(int, input("row #3: ").split()))
@@ -89,5 +89,22 @@ print(game[finalpick])
 
 
 
+
+"""
+
+x = 0
+for x in range(10):
+    x = x + 1
+    if x == 1:
+        print("1")
+        break
+    if x == 2 and x != 1:
+        print("2")
+        break
+    if x == 3 and x != 2 and x != 1:
+        print("3")
+        break
+    continue
+print("hi")
 
 
