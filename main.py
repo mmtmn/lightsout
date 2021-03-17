@@ -23,4 +23,93 @@ print("")
 rows = [row1,row2,row3,row4,row5]
 game = np.array(rows)
 print(game)
-print("hello")
+
+row1_solution = []
+location = 0
+for x in game:
+    for y in x:
+        location += 1
+        if y == 1:
+            if location < 6:
+                row1_solution.append(location + 5)
+
+print("The order you should click the lights is: ", row1_solution)
+
+"""
+now I need to update the game
+"""
+
+print("Please update the game: ")
+
+row1 = list(map(int, input("row #1: ").split()))
+row2 = list(map(int, input("row #2: ").split()))
+row3 = list(map(int, input("row #3: ").split()))
+row4 = list(map(int, input("row #4: ").split()))
+row5 = list(map(int, input("row #5: ").split()))
+
+print("")
+
+rows = [row1,row2,row3,row4,row5]
+game = np.array(rows)
+print(game)
+
+row2_solution = []
+location = 0
+for x in game:
+    for y in x:
+        location += 1
+        if y == 1:
+            if location < 11:
+                row2_solution.append(location + 5)
+
+print("The order you should click the lights is: ", row2_solution)
+
+print("Please update the game: ")
+
+row1 = list(map(int, input("row #1: ").split()))
+row2 = list(map(int, input("row #2: ").split()))
+row3 = list(map(int, input("row #3: ").split()))
+row4 = list(map(int, input("row #4: ").split()))
+row5 = list(map(int, input("row #5: ").split()))
+
+print("")
+
+rows = [row1,row2,row3,row4,row5]
+game = np.array(rows)
+print(game)
+
+row3_solution = []
+location = 0
+for x in game:
+    for y in x:
+        location += 1
+        if y == 1:
+            if location < 16:
+                row3_solution.append(location + 5)
+
+print("The order you should click the lights is: ", row3_solution)
+
+print("Please update the game: ")
+
+row1 = list(map(int, input("row #1: ").split()))
+row2 = list(map(int, input("row #2: ").split()))
+row3 = list(map(int, input("row #3: ").split()))
+row4 = list(map(int, input("row #4: ").split()))
+row5 = list(map(int, input("row #5: ").split()))
+
+print("")
+
+rows = [row1,row2,row3,row4,row5]
+game = np.array(rows)
+print(game)
+
+row4_solution = []
+location = 0
+for x in game:
+    for y in x:
+        location += 1
+        if y == 1:
+            if location < 21:
+                row4_solution.append(location + 5)
+
+print("The order you should click the lights is: ", row4_solution)
