@@ -4,7 +4,7 @@
 
 def translate(pick):
     """
-    receives pick, outputs finalpick
+    receives numerical state of space, outputs finalpick as a coordenate
     """
     #pick = int(input("pick a number: "))
     x1 = 0

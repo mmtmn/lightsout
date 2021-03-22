@@ -1,9 +1,39 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
+
+
+
+def inicialInputs():
+    row1 = list(map(int, input("row #1: ").split()))
+    row2 = list(map(int, input("row #2: ").split()))
+
+    if len(row1) != 5:
+        while len(row1) != 5:
+            row1 = list(map(int, input("row #1: ").split()))
+            for x in row1:
+                if x != 0 and x != 1:
+                    row1 = list(map(int, input("row #1: ").split()))
+    
+    if len(row2) != 5:
+        while len(row2) != 5:
+            row2 = list(map(int, input("row #2: ").split()))
+            for x in row2:
+                if x != 0 and x != 1:
+                    row2 = list(map(int, input("row #2: ").split()))
+    return row1,row2
+inicialInputs()
+a = inicialInputs()
+print(a)
+
+
+print("nice!")
+"""
 import random
 
 n = random.randint(0,5)
 print(n,n,n,n,n)
+"""
+
 """
 from translator import translate
 

@@ -5,16 +5,9 @@
 import numpy as np
 
 def play(game, pick):
-    #row1 = list(map(int, input("row #1: ").split()))
-    #row2 = list(map(int, input("row #2: ").split()))
-    #row3 = list(map(int, input("row #3: ").split()))
-    #row4 = list(map(int, input("row #4: ").split()))
-    #row5 = list(map(int, input("row #5: ").split()))
-    #rows = [row1,row2,row3,row4,row5]
-    #game = np.array(rows)
-    #print(game)
-
-    #pick = int(input("pick: "))
+    """
+    This is the set of all possible actions
+    """
 
     # btn1
     if pick == 1:
