@@ -1,9 +1,7 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
-# https://help.gnome.org/users/lightsoff/stable/strategy.html.en
 
 import numpy as np
-import random 
 from game import play
 from translator import translate
 
@@ -19,22 +17,21 @@ print("5 - There should be 5 numbers per row.")
 print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
 
 def lightsOutResolution():
-    """
-    Main function of the software
+    """ Main function of the software
     """
     # collecting input for inicial space's position
-
     # collecting row1's inputs
     row1 = list(map(int, input("row #1: ").split()))
+    # making sure row have 5 digits
     while len(row1) != 5:
         row1.clear()
         row1 = list(map(int, input("row #1: ").split()))
+    # making sure digits are either zero or one
     if len(row1) == 5:
         for x in row1:
             if x != 1 and x != 0:
                 row1.clear()
                 row1 = list(map(int, input("row #1: ").split()))
-
     # collecting row2's inputs
     row2 = list(map(int, input("row #2: ").split()))
     while len(row2) != 5:
@@ -45,7 +42,6 @@ def lightsOutResolution():
             if x != 1 and x != 0:
                 row2.clear()
                 row2 = list(map(int, input("row #2: ").split()))
-
     # collecting row3's inputs
     row3 = list(map(int, input("row #3: ").split()))
     while len(row3) != 5:
@@ -56,7 +52,6 @@ def lightsOutResolution():
             if x != 1 and x != 0:
                 row3.clear()
                 row3 = list(map(int, input("row #3: ").split()))
-    
     # collecting row4's inputs
     row4 = list(map(int, input("row #4: ").split()))
     while len(row4) != 5:
@@ -67,7 +62,6 @@ def lightsOutResolution():
             if x != 1 and x != 0:
                 row4.clear()
                 row4 = list(map(int, input("row #4: ").split()))
-
     # collecting row5's inputs
     row5 = list(map(int, input("row #5: ").split()))
     while len(row5) != 5:
@@ -78,31 +72,38 @@ def lightsOutResolution():
             if x != 1 and x != 0:
                 row5.clear()
                 row5 = list(map(int, input("row #5: ").split()))
+    # all the data was collected for the inicial spacial state
     rows = [row1,row2,row3,row4,row5]
+    # turning the rows into a 5x5 numpy array
     game = np.array(rows)
+    # list that carries over all operations for final response
     final_solution = []
     print(game)
+    # variable that makes sure the game is not impossible
     impossible = 0
+    # important while loop that ends when game is resolved
     while np.count_nonzero(game) and impossible != 100:
         impossible += 1
+        # list to keep track of row's solutions and game's next steps
         row1_solution = []
+        # keeps track of which special state is being validated
         location = 0
         for x in game:
+            # if the light is on
             for y in x:
                 location += 1
                 if y == 1:
+                    # on the first row
                     if location < 6:
                         row1_solution.append(location + 5)
                         final_solution.append(location + 5) 
         print("")
         print("The order you should click the lights is: ", row1_solution)
+        # play the solutions
         for x in row1_solution:
             pick = x
             play(game, pick)
             print(game)
-        
-
-        
         # row 2's resolution
         row2_solution = []
         location = 0
@@ -113,7 +114,6 @@ def lightsOutResolution():
                     if location < 11:
                         row2_solution.append(location + 5)
                         final_solution.append(location + 5) 
-
         print("")
         print("The order you should click the lights is: ", row2_solution)
         # play the solutions
@@ -121,8 +121,6 @@ def lightsOutResolution():
             pick = x
             play(game, pick)
             print(game)
-
-
         # row 3's resolution
         row3_solution = []
         location = 0
@@ -133,7 +131,6 @@ def lightsOutResolution():
                     if location < 16:
                         row3_solution.append(location + 5)
                         final_solution.append(location + 5) 
-
         print("")
         print("The order you should click the lights is: ", row3_solution)
         # play the solutions
@@ -141,8 +138,6 @@ def lightsOutResolution():
             pick = x
             play(game, pick)
             print(game)
-
-
         # row 4's resolution
         row4_solution = []
         location = 0
@@ -153,7 +148,6 @@ def lightsOutResolution():
                     if location < 21:
                         row4_solution.append(location + 5)
                         final_solution.append(location + 5) 
-
         print("")
         print("The order you should click the lights is: ", row4_solution)
         # play the solutions
@@ -161,13 +155,10 @@ def lightsOutResolution():
             pick = x
             play(game, pick)
             print(game)
-
-
         # row 5's resolution
         row5_solution = []
         location = 0
         stop = 0
-        n = random.randint(0,5)
         for x in game:
             for y in x:
                 location += 1
@@ -185,7 +176,6 @@ def lightsOutResolution():
                                 pick = x
                                 play(game, pick)
                                 print(game)
-
                         if location == 22 and stop != 1:
                                 row5_solution.append(2)
                                 final_solution.append(2) 
@@ -198,7 +188,6 @@ def lightsOutResolution():
                                     pick = x
                                     play(game, pick)
                                     print(game)
-
                         if location == 23 and stop != 1:
                             row5_solution.append(4)
                             final_solution.append(4) 
@@ -209,30 +198,7 @@ def lightsOutResolution():
                                     pick = x
                                     play(game, pick)
                                     print(game)
-                        
-                        if location == 24 and stop != 1:
-                            row5_solution.append(n)
-                            final_solution.append(n) 
-                            stop = 1
-                            print("The order you should click the lights is: ", row5_solution)
-                            # play the solutions
-                            for x in row5_solution:
-                                    pick = x
-                                    play(game, pick)
-                                    print(game)
-                        
-                        if location == 25 and stop != 1:
-                            row5_solution.append(n)
-                            final_solution.append(n) 
-                            stop = 1
-                            print("The order you should click the lights is: ", row5_solution)
-                            # play the solutions
-                            for x in row5_solution:
-                                    pick = x
-                                    play(game, pick)
-                                    print(game)
-                        
-    # closing while loop in case game is won
+    # closes the while loop here in case the game is won
     if impossible != 100:
         print("")
         print("Congratulations, the game is resolved!")
