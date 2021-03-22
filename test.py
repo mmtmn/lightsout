@@ -1,7 +1,10 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
+import random
 
-
+n = random.randint(0,5)
+print(n,n,n,n,n)
+"""
 from translator import translate
 
 list = [25, 1, 2]
@@ -11,7 +14,7 @@ for x in list:
     coordinates = translate(pick)
     list2.append(coordinates)
 print(list2)
-
+"""
 
 
 """

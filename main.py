@@ -3,6 +3,7 @@
 # https://help.gnome.org/users/lightsoff/stable/strategy.html.en
 
 import numpy as np
+import random 
 from game import play
 from translator import translate
 
@@ -27,7 +28,9 @@ def lightsOutResolution():
     game = np.array(rows)
     final_solution = []
     print(game)
-    while np.count_nonzero(game):
+    impossible = 0
+    while np.count_nonzero(game) and impossible != 100:
+        impossible += 1
         row1_solution = []
         location = 0
         for x in game:
@@ -110,7 +113,7 @@ def lightsOutResolution():
         row5_solution = []
         location = 0
         stop = 0
-        gameover = 0
+        n = random.randint(0,5)
         for x in game:
             for y in x:
                 location += 1
@@ -128,6 +131,7 @@ def lightsOutResolution():
                                 pick = x
                                 play(game, pick)
                                 print(game)
+
                         if location == 22 and stop != 1:
                                 row5_solution.append(2)
                                 final_solution.append(2) 
@@ -140,6 +144,7 @@ def lightsOutResolution():
                                     pick = x
                                     play(game, pick)
                                     print(game)
+
                         if location == 23 and stop != 1:
                             row5_solution.append(4)
                             final_solution.append(4) 
@@ -150,15 +155,43 @@ def lightsOutResolution():
                                     pick = x
                                     play(game, pick)
                                     print(game)
+                        
+                        if location == 24 and stop != 1:
+                            row5_solution.append(n)
+                            final_solution.append(n) 
+                            stop = 1
+                            print("The order you should click the lights is: ", row5_solution)
+                            # play the solutions
+                            for x in row5_solution:
+                                    pick = x
+                                    play(game, pick)
+                                    print(game)
+                        
+                        if location == 25 and stop != 1:
+                            row5_solution.append(n)
+                            final_solution.append(n) 
+                            stop = 1
+                            print("The order you should click the lights is: ", row5_solution)
+                            # play the solutions
+                            for x in row5_solution:
+                                    pick = x
+                                    play(game, pick)
+                                    print(game)
+                        
     # closing while loop in case game is won
-    print("Congratulations, the game is resolved!")
-    final_coordinates = []
-    for x in final_solution:
-        pick = x
-        coordinates = translate(pick)
-        final_coordinates.append(coordinates)
-    print("To win this game, you must press the following buttons in this specific order:", final_solution)
-    print("To be even more clear, you must press the buttons on the following coordinates: ")
-    for x in final_coordinates:
-        print(x)
+    if impossible != 100:
+        print("")
+        print("Congratulations, the game is resolved!")
+        final_coordinates = []
+        for x in final_solution:
+            pick = x
+            coordinates = translate(pick)
+            final_coordinates.append(coordinates)
+        print("To win this game, you must press the following buttons in this specific order:", final_solution)
+        print("To be even more clear, you must press the buttons on the following coordinates: ")
+        for x in final_coordinates:
+            print(x)
+    else:
+        print("")
+        print("This is not a possible game to solve!")
 lightsOutResolution()
