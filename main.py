@@ -19,11 +19,65 @@ print("5 - There should be 5 numbers per row.")
 print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
 
 def lightsOutResolution():
+    """
+    Main function of the software
+    """
+    # collecting input for inicial space's position
+
+    # collecting row1's inputs
     row1 = list(map(int, input("row #1: ").split()))
+    while len(row1) != 5:
+        row1.clear()
+        row1 = list(map(int, input("row #1: ").split()))
+    if len(row1) == 5:
+        for x in row1:
+            if x != 1 and x != 0:
+                row1.clear()
+                row1 = list(map(int, input("row #1: ").split()))
+
+    # collecting row2's inputs
     row2 = list(map(int, input("row #2: ").split()))
+    while len(row2) != 5:
+        row2.clear()
+        row2 = list(map(int, input("row #2: ").split()))
+    if len(row2) == 5:
+        for x in row2:
+            if x != 1 and x != 0:
+                row2.clear()
+                row2 = list(map(int, input("row #2: ").split()))
+
+    # collecting row3's inputs
     row3 = list(map(int, input("row #3: ").split()))
+    while len(row3) != 5:
+        row3.clear()
+        row3 = list(map(int, input("row #3: ").split()))
+    if len(row3) == 5:
+        for x in row3:
+            if x != 1 and x != 0:
+                row3.clear()
+                row3 = list(map(int, input("row #3: ").split()))
+    
+    # collecting row4's inputs
     row4 = list(map(int, input("row #4: ").split()))
+    while len(row4) != 5:
+        row4.clear()
+        row4 = list(map(int, input("row #4: ").split()))
+    if len(row4) == 5:
+        for x in row4:
+            if x != 1 and x != 0:
+                row4.clear()
+                row4 = list(map(int, input("row #4: ").split()))
+
+    # collecting row5's inputs
     row5 = list(map(int, input("row #5: ").split()))
+    while len(row5) != 5:
+        row5.clear()
+        row5 = list(map(int, input("row #5: ").split()))
+    if len(row5) == 5:
+        for x in row5:
+            if x != 1 and x != 0:
+                row5.clear()
+                row5 = list(map(int, input("row #5: ").split()))
     rows = [row1,row2,row3,row4,row5]
     game = np.array(rows)
     final_solution = []
