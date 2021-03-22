@@ -1,4 +1,6 @@
 # made by Thiago M Nóbrega
+# to run this project: python main.py
+
 
 import numpy as np
 
@@ -472,7 +474,7 @@ def play(game, pick):
         if game[3,4] != 0:
             game[3,4] = 0
         elif game[3,4] != 1:
-            game[3,3] = 1
+            game[3,4] = 1
         
         if game[2,4] != 0:
             game[2,4] = 0

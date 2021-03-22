@@ -1,4 +1,6 @@
 # made by Thiago M Nóbrega
+# to run this project: python main.py
+
 
 def translate(pick):
     """

@@ -1,4 +1,6 @@
 # made by Thiago M Nóbrega
+# to run this project: python main.py
+# https://help.gnome.org/users/lightsoff/stable/strategy.html.en
 
 import numpy as np
 from game import play
