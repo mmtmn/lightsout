@@ -2,8 +2,8 @@
 # to run this project: python main.py
 
 import numpy as np
-from game import play
-from translator import translate
+from game5x5 import play
+from translator5x5 import translate
 
 print("")
 print("1 - First open the following website on your browser of choice:") 
@@ -16,7 +16,7 @@ print("4 - 1 is equal to a light on, and a zero is equal to a light off")
 print("5 - There should be 5 numbers per row.")
 print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
 
-def lightsOutHeuristicsResolution():
+def HeuristicsResolution():
     """ Main function of the software
     """
     # collecting input for inicial space's position
