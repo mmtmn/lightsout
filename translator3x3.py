@@ -7,6 +7,7 @@ def translate(pick):
     receives numerical state of space, outputs finalpick as a coordenate
     """
     #pick = int(input("pick a number: "))
+    finalpick = 0,0
     x1 = 0
     y0 = 0
     if pick == 1:
@@ -27,3 +28,5 @@ def translate(pick):
         finalpick = 2,1 
     elif pick == 9:
         finalpick = 2,2 
+
+    return finalpick
