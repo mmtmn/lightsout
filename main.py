@@ -14,11 +14,15 @@ def main():
         from spacesOfStates import SpacesOfStatesResolution
         SpacesOfStatesResolution()
         main()
-    elif x ==2:
+    elif x == 2:
+        from bruteForceByRandom import BruteForceResolution
+        BruteForceResolution()
+        main()
+    elif x == 3:
         from heuristics import HeuristicsResolution
         HeuristicsResolution()
         main()
-    elif x == 3:
+    elif x == 4:
         print("")
         print("Thank you so much for your time!")
         print("")
