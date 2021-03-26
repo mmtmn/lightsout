@@ -11,7 +11,7 @@ from random import randrange
 
 print("")
 print("1 - First open the following website on your browser of choice:") 
-print("https://www.geogebra.org/m/JexnDJpt#material/RmRUx8Yd")
+print("https://www.geogebra.org/m/JexnDJpt#material/uMG8BYsH")
 print("")
 print("We will be solving a 3 by 3 lights out puzzle")
 print("2 - First click on the button 'restart' and than on 'random'.")
