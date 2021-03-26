@@ -2,7 +2,22 @@
 # to run this project: python main.py
 
 
+
+
 """
+from random import randrange
+
+list = []
+for x in range(10):
+    #v = randrange(10)
+    v = 1
+    print("working")
+    if v not in list:
+        list.append(v)
+        print(v)
+print(list)
+    
+
 def inicialInputs():
     row1 = list(map(int, input("row #1: ").split()))
     row2 = list(map(int, input("row #2: ").split()))
