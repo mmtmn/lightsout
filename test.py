@@ -2,7 +2,7 @@
 # to run this project: python main.py
 
 
-
+"""
 def inicialInputs():
     row1 = list(map(int, input("row #1: ").split()))
     row2 = list(map(int, input("row #2: ").split()))
@@ -27,6 +27,7 @@ print(a)
 
 
 print("nice!")
+"""
 """
 import random
 
