@@ -20,7 +20,7 @@ print("4 - 1 is equal to a light on, and a zero is equal to a light off")
 print("5 - There should be 5 numbers per row.")
 print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
 
-def SpacesOfStatesResolution():
+def StateSpace():
     """ Main function of the software
     """
     # collecting input for inicial space's position

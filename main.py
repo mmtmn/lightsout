@@ -11,12 +11,12 @@ def main():
     print("")
     x = int(input("You choice: "))
     if x == 1:
-        from spacesOfStates import SpacesOfStatesResolution
-        SpacesOfStatesResolution()
+        from stateSpace import StateSpace
+        StateSpace()
         main()
     elif x == 2:
-        from bruteForceByRandom import BruteForceResolution
-        BruteForceResolution()
+        from bruteForce import BruteForce
+        BruteForce()
         main()
     elif x == 3:
         from heuristics import HeuristicsResolution
