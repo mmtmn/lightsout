@@ -12,6 +12,25 @@ print(obj)
 #    print(obj)
 
 """
+    x = 0
+    pick = 1
+    side_list = []
+    for x in range(10):
+        x += 1
+        play(game,pick)
+        # --- copy&&append
+        d = np.copy(game)
+        side_list.append(d)
+        d1 = np.copy[side_list[x]]
+        d2 = np.array2string(d1)
+
+        sets.append(d)
+        # sets game to inicial game
+        game = np.array(c)
+        pick += 1
+"""
+
+"""
 from random import randrange
 
 list = []

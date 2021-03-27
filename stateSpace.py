@@ -61,26 +61,81 @@ def StateSpace():
     # turning the rows into a 5x5 numpy array
     game = np.array(rows)
     sets = []
+    lists = [[] for i in range(10000)]
     # --- copies and appends np array ---
     c = np.copy(game)
-    sets.append(c)
+    c1 = np.array2string(c)
+    lists[0].append(c1)
+    #print(lists[0])
+    #sets.append()
     # --- sets inicial pick for game ---
 
+
+    
+    # 1. play all posibilities
+    #def play_all():
+    pick = 0
+    i = 0
+    cycle = 0
+    for cycle in range(2):
+        for i in range(2):
+            i += 1
+            for x in range(9):
+                pick +=1
+                play(game,pick)
+                print(game)
+                hold = np.copy(game)
+                hold1 = np.array2string(hold)
+                if hold1 not in sets:
+                    (lists[cycle+1]).append(hold1)
+                #game = np.array(lists[cycle])
+        cycle += 1
+    print(lists[2])
+    #play_all()
+    
+
+    
+
+    # 2. add all new states to a new list
+    
+    # 3. repeat until state is null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    """
     x = 0
     pick = 1
+    side_list = []
     for x in range(10):
         x += 1
         play(game,pick)
         # --- copy&&append
         d = np.copy(game)
+        side_list.append(d)
+        d1 = np.copy[side_list[x]]
+        d2 = np.array2string(d1)
+
         sets.append(d)
         # sets game to inicial game
         game = np.array(c)
         pick += 1
+    """
     
 
 
-    
+    """
     test = []
     game = np.array(c)
     pick = 1
@@ -95,14 +150,10 @@ def StateSpace():
         var1 = np.copy(x)
         var2 = np.array2string(var1)
         if (var2==e2):
-            print("")
-            print("deu certo")
-            print(e1)
-            print(var2)
-            print("")
+            
         else:
             pass
-        
+    """
 
     """    
     for x in sets:
