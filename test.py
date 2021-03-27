@@ -1,8 +1,15 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
 
+obj = [[] for i in range(10000)]
+print(obj)
 
-
+#x = 0
+#for x in range(100):
+#    x += 1
+#    obj[x].append(x)
+#    obj[x-1].append(x-1)
+#    print(obj)
 
 """
 from random import randrange

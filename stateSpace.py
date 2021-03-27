@@ -7,7 +7,6 @@ sys.setrecursionlimit(1500)
 import numpy as np
 from game3x3 import play
 from translator3x3 import translate
-from random import randrange
 
 print("")
 print("1 - First open the following website on your browser of choice:") 
@@ -61,15 +60,309 @@ def StateSpace():
     rows = [row1,row2,row3]
     # turning the rows into a 5x5 numpy array
     game = np.array(rows)
-    game_states = []
-    count = 0
-    while count in range(100000):
-        count +=1
-        print(count)
-        pick = randrange(10)
-        game_states.append(pick)
-        play(game,pick)
-        print(game)
+    lists = [[] for i in range(10000)]
+    #lists[1].append(game)
+
+
+
+    #loop_counter = 1
+    #nine_choices = 0
+    #while np.count_nonzero(game):
+    #    for loop_counter in range(1000):
+    #        loop_counter += 1
+    #        print("attempt number:", loop_counter)
+
+    pick = 1
+    #        pickDepth1 = 1
+    #        pickDepth2 = 1
+    #        pickDepth3 = 1
+    #        pickDepeth4 = 1
+    #        pickDepeth5 = 1
+    #        pickDepeth6 = 1
+    #        pickDepeth7 = 1
+    #        pickDepeth8 = 1
+    #        pickDepeth9 = 1
+
+
+"""
+    a = 1
+    b = 1
+    L= [0]
+    L1 = []
+    stop = 0
+    #while np.count_nonzero(game):
+    while a < 4:
+        # 'a' side
+        while stop < 10:
+            stop += 1
+            for a in range(9):
+                
+                pick = a
+                play(game,pick)
+                a += 1
+
+                #play
+                for x in L:
+                    if (x==game).all():    
+                        print("repeated")
+                        L.append(game)
+                    else:
+                        L1.append(game)
+                
+                # a's print
+                print("a: ", a)
+                print(game)
+
+    print("L: ", L)
+    print("L1: ", L1)
+"""
+"""
+            # 'b' side
+            for b in range(9):
+
+                pick = b
+                play(game,pick)
+                b += 1
+
+                #play
+                for x in L:
+                    if (x==game).all():    
+                        print("repeated")
+                else:
+                    L1.append(game)
+                L.append(game)
+
+                # b's print
+                print("b: ", b)
+                print(game)
+"""
+
+"""
+                # 'c' side
+                for c in range(9):
+
+                    pick = c
+                    play(game,pick)
+                    c += 1
+
+                    #play
+                    if game in L:
+                        print("repeated")
+                    else:
+                        L1.append(game)
+                    L.append(game)
+
+                    # c's print
+                    print("c: ", c)
+                    print(game)
+                
+                    # 'd' side
+                    for d in range(9):
+
+                        pick = d
+                        play(game,pick)
+                        d += 1
+
+                        #play
+                        if game in L:
+                            print("repeated")
+                        else:
+                            L1.append(game)
+                        L.append(game)
+
+                        # d's print
+                        print("d: ", d)
+                        print(game)
+
+                        # 'e' side
+                        for e in range(9):
+
+                            pick = e
+                            play(game,pick)
+                            e += 1
+
+                            #play
+                            if game in L:
+                                print("repeated")
+                            else:
+                                L1.append(game)
+                            L.append(game)
+
+                            # e's print
+                            print("e: ", e)
+                            print(game)
+                        
+                        # 'f' side
+                        for f in range(9):
+
+                            pick = f
+                            play(game,pick)
+                            f += 1
+
+                            #play
+                            if game in L:
+                                print("repeated")
+                            else:
+                                L1.append(game)
+                            L.append(game)
+
+                            # f's print
+                            print("f: ", f)
+                            print(game)
+
+                            # 'g' side
+                            for g in range(9):
+
+                                pick = g
+                                play(game,pick)
+                                g += 1
+
+                                #play
+                                if game in L:
+                                    print("repeated")
+                                else:
+                                    L1.append(game)
+                                L.append(game)
+
+                                # g's print
+                                print("g: ", g)
+                                print(game)
+
+                                # 'h' side
+                                for h in range(9):
+
+                                    pick = h
+                                    play(game,pick)
+                                    h += 1
+
+                                    #play
+                                    if game in L:
+                                        print("repeated")
+                                    else:
+                                        L1.append(game)
+                                    L.append(game)
+
+                                    # h's print
+                                    print("h: ", h)
+                                    print(game)
+
+                                    # 'i' side
+                                    for i in range(9):
+
+                                        pick = i
+                                        play(game,pick)
+                                        i += 1
+
+                                        #play
+                                        if game in L:
+                                            print("repeated")
+                                        else:
+                                            L1.append(game)
+                                        L.append(game)
+
+                                        # i's print
+                                        print("i: ", i)
+                                        print(game)
+    print("game over")
+"""
+    # prints
+    #print("all:")
+    #for x in L:
+    #    print(x)
+    #    print("")
+    
+    #print("unique: ")
+    #for x in L1:
+    #    print(x)
+    #    print("")
+"""          
+                for pickDepth1 in range(9):
+                    pickDepth1 +=1
+                    pick = pickDepth1   
+                    play(game,pick)
+                    #print(game)
+                    if game not in lists[1]:
+                        lists[1].append(game)
+                        print(game)
+                    
+
+                    for pickDepth2 in range(9):
+                        pickDepth2 +=1
+                        pick = pickDepth2   
+                        play(game,pick)
+                        #print(game)
+                        if game not in lists[1]:
+                            lists[1].append(game)
+                            print(game)
+                        
+                        
+                        for pickDepth3 in range(9):
+                            pickDepth3 +=1
+                            pick = pickDepth3   
+                            play(game,pick)
+                            #print(game)
+                            if game not in lists[1]:
+                                lists[1].append(game)
+                                print(game)
+"""                            
+
+                
+
+                
+
+
+
+
+"""
+        for nine_choices in range(10):
+            nine_choices += 1
+            pick = nine_choices
+            play(game,pick)
+
+            lists[loop_counter].append(game)
+            for x in lists[loop_counter]:
+                play(game.pick)
+                lists[loop_counter+10].append(game)
+
+
+
+
+
+
+    lists[1].append(game)
+    print(lists[1])
+
+    #print("")
+
+    pick = 1
+    play(game,pick)
+
+    #game_states = []
+    #count = 0
+    #pick = 1
+    #lists = [[] for i in range(10000)]
+    #while count in range(3):
+       # count +=1
+        #print(count)
+
+        #pick += 1
+        # creating 10k lists
+        
+        # memory
+    lists[1].append(game)
+
+    # order of picks
+    #game_states.append(pick)
+    #play(game,pick)
+    #print(game)
+    #lists[2].append(game)
+    print(lists[1])
+    #print(lists[2])
+
+
+
+
+        # when game is won
         if np.count_nonzero(game) == False:
             print("")
             print("Congratulations, the game is resolved!")
@@ -82,3 +375,4 @@ def StateSpace():
             print("To be even more clear, you must press the buttons on the following coordinates: ")
             print(final_coordinates)
             break
+"""
