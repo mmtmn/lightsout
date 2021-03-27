@@ -60,7 +60,115 @@ def StateSpace():
     rows = [row1,row2,row3]
     # turning the rows into a 5x5 numpy array
     game = np.array(rows)
-    lists = [[] for i in range(10000)]
+    sets = []
+    # --- copies and appends np array ---
+    c = np.copy(game)
+    sets.append(c)
+    # --- sets inicial pick for game ---
+
+    x = 0
+    pick = 1
+    for x in range(10):
+        x += 1
+        play(game,pick)
+        # --- copy&&append
+        d = np.copy(game)
+        sets.append(d)
+        # sets game to inicial game
+        game = np.array(c)
+        pick += 1
+    
+
+
+    
+    test = []
+    game = np.array(c)
+    pick = 1
+    play(game,pick)
+    e = np.copy(game)
+    test.append(e)
+    e1 = np.copy(test[0])
+    e2 = np.array2string(e1)
+
+    
+    for x in sets:
+        var1 = np.copy(x)
+        var2 = np.array2string(var1)
+        if (var2==e2):
+            print("")
+            print("deu certo")
+            print(e1)
+            print(var2)
+            print("")
+        else:
+            pass
+        
+
+    """    
+    for x in sets:
+        print("")
+        print(x)
+    """
+    #d = np.copy(game)
+    #se estiver dentro do sets
+    """
+    if (c == d).all():
+        print("working")
+    # se não estiver
+    else:
+        print("wtf")
+    """
+    """
+    # append numpy array
+    for x in range(10):
+        c = np.copy(game)
+        for x in 
+        sets.append(c)
+        pick += 1
+        play(game,pick)
+        #print(game)
+
+
+    for x in sets:
+        print("")
+        print(x)
+    """
+        
+    
+
+
+    """
+    for pick in range(10):
+        play(game,pick)
+        print(game)
+        pick += 1
+        game = inicial_game[0]
+    """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ------------ nice solution ----------
+    #lists = [[] for i in range(10000)]
+    # ------------ nice solution ----------
+
     #lists[1].append(game)
 
 
@@ -72,7 +180,7 @@ def StateSpace():
     #        loop_counter += 1
     #        print("attempt number:", loop_counter)
 
-    pick = 1
+    
     #        pickDepth1 = 1
     #        pickDepth2 = 1
     #        pickDepth3 = 1
