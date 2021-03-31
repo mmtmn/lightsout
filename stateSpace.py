@@ -66,32 +66,112 @@ def StateSpace():
     c = np.copy(game)
     c1 = np.array2string(c)
     lists[0].append(c1)
+    sets_values = []
     #print(lists[0])
-    #sets.append()
-    # --- sets inicial pick for game ---
-
-
+    sets.append(c1)
+    sets_values.append(c)
     
+    # --- sets inicial pick for game ---
+    
+    pick = 1
+    for pick in range(9):
+        pick += 1
+        
+        print(pick)
+        play(game,pick)
+        d = np.copy(game)
+        print(d)
+        d1 = np.array2string(d)
+        
+        if d1 not in sets:
+            sets.append(d1)
+            sets_values.append(d)
+            lists[0].append(d1)
+        else:
+            print("broken")
+        del d, d1
+    
+    print("sets_values:")
+    # set_values has the np array
+    for x in sets_values:
+        print("") 
+        print(x)
+
+    print("sets:")
+    # sets has the np arrays as strings
+    for x in sets:
+        print("")
+        print(x)
+
+    print("lists[0]:")
+    # lists[] has the total memory of all np arrays as strings
+    for x in lists[0]:
+        print("")
+        print(x)
+
+
+
+
+""" 
     # 1. play all posibilities
-    #def play_all():
+    # def play_all():
     pick = 0
-    i = 0
+    i = -1
+    j = 0
     cycle = 0
-    for cycle in range(2):
-        for i in range(2):
-            i += 1
-            for x in range(9):
-                pick +=1
-                play(game,pick)
-                print(game)
-                hold = np.copy(game)
-                hold1 = np.array2string(hold)
-                if hold1 not in sets:
-                    (lists[cycle+1]).append(hold1)
-                #game = np.array(lists[cycle])
-        cycle += 1
-    print(lists[2])
-    #play_all()
+
+    print(lists)
+
+    while i < 1000:
+        i += 1
+        for x in range(9):
+            pick +=1
+            play(game,pick)
+            print(game)
+            hold = np.copy(game)
+            hold1 = np.array2string(hold)
+            if hold1 not in sets:
+                (lists[i+1]).append(hold1)
+                print(i)
+                # print((lists[i+1]).index())
+                sets.append(hold1)
+                sets_values.append(hold)
+            else:
+                pass
+            
+            #game = np.array(sets_values[i])
+            game = np.array(sets_values[i][i])
+        #print("----")
+   
+        
+        print(i)
+
+
+                for x in sets_values:
+                    print("")
+                    print(x)
+                
+                for x in sets:
+                    print("")
+                    print(sets)
+
+    #for x in sets_values:
+    #    print("")
+    #    print(x)
+
+    #print("list2: ")
+    #print(lists[4])
+
+    print("list1")
+    for x in lists[1]:
+        print("")
+        print(x)
+    print("list2")
+    for x in lists[2]:
+        print("")
+        print(x)
+    # play_all()
+
     
 
     
@@ -114,7 +194,7 @@ def StateSpace():
 
 
 
-    """
+
     x = 0
     pick = 1
     side_list = []
@@ -131,11 +211,9 @@ def StateSpace():
         # sets game to inicial game
         game = np.array(c)
         pick += 1
-    """
-    
 
 
-    """
+
     test = []
     game = np.array(c)
     pick = 1
@@ -153,23 +231,24 @@ def StateSpace():
             
         else:
             pass
-    """
 
-    """    
+
+
     for x in sets:
         print("")
         print(x)
-    """
+
     #d = np.copy(game)
     #se estiver dentro do sets
-    """
+
     if (c == d).all():
         print("working")
     # se não estiver
     else:
         print("wtf")
-    """
-    """
+
+
+
     # append numpy array
     for x in range(10):
         c = np.copy(game)
@@ -183,18 +262,18 @@ def StateSpace():
     for x in sets:
         print("")
         print(x)
-    """
+
         
     
 
 
-    """
+
     for pick in range(10):
         play(game,pick)
         print(game)
         pick += 1
         game = inicial_game[0]
-    """
+  
 
 
 
@@ -243,7 +322,7 @@ def StateSpace():
     #        pickDepeth9 = 1
 
 
-"""
+
     a = 1
     b = 1
     L= [0]
@@ -274,8 +353,7 @@ def StateSpace():
 
     print("L: ", L)
     print("L1: ", L1)
-"""
-"""
+
             # 'b' side
             for b in range(9):
 
@@ -294,9 +372,9 @@ def StateSpace():
                 # b's print
                 print("b: ", b)
                 print(game)
-"""
 
-"""
+
+
                 # 'c' side
                 for c in range(9):
 
@@ -423,7 +501,7 @@ def StateSpace():
                                         print("i: ", i)
                                         print(game)
     print("game over")
-"""
+
     # prints
     #print("all:")
     #for x in L:
@@ -434,7 +512,7 @@ def StateSpace():
     #for x in L1:
     #    print(x)
     #    print("")
-"""          
+         
                 for pickDepth1 in range(9):
                     pickDepth1 +=1
                     pick = pickDepth1   
@@ -463,7 +541,7 @@ def StateSpace():
                             if game not in lists[1]:
                                 lists[1].append(game)
                                 print(game)
-"""                            
+                           
 
                 
 
@@ -472,7 +550,7 @@ def StateSpace():
 
 
 
-"""
+
         for nine_choices in range(10):
             nine_choices += 1
             pick = nine_choices
