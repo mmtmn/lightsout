@@ -13,7 +13,13 @@ def main():
     print("4. exit")
     print("")
     print("")
-    x = int(input("Your choice: "))
+    while True:
+        try:
+            x = int(input('Your choice: '))
+            break
+        except:
+            print("Invalid option. Please try again.")
+        
     if x == 1:
         from stateSpace import StateSpace
         StateSpace()
@@ -36,4 +42,5 @@ def main():
         print("Sorry, that was not an option!")
         print("")
         main()
+
 main()
