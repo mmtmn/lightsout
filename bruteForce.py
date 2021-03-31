@@ -73,12 +73,39 @@ def BruteForce():
         if np.count_nonzero(game) == False:
             print("")
             print("Congratulations, the game is resolved!")
+            print("")
+            print("1.) Final Solution (in steps taken)")
+            print("2.) Final Solution (in coordinates)")
+            print("3.) Take me back to the Main Menu")
             final_coordinates = []
             for x in game_states:
                 pick = x
                 coordinates = translate(pick)
                 final_coordinates.append(coordinates)
+            """
             print("To win this game, you must press the following buttons in this specific order:", game_states)
             print("To be even more clear, you must press the buttons on the following coordinates: ")
             print(final_coordinates)
-            break
+            """
+            # print final answer
+            def final_answer():
+                while True:
+                    try:
+                        question = int(input('Answer: '))
+                        break
+                    except:
+                        print("Invalid option. Please try again.")
+                    
+                if question == 1:
+                    print(game_states)
+                if question == 2:
+                    print(final_coordinates)
+                if question == 3:
+                    from main import main
+                    main()      
+                else:
+                    final_answer()
+            final_answer()
+            #        game_states
+            #        final_coordinates
+            #break

@@ -30,7 +30,7 @@ def main():
         print("")
         print("Thank you so much for your time!")
         print("")
-        exit
+        exit()
     else:
         print("")
         print("Sorry, that was not an option!")

@@ -100,6 +100,10 @@ def StateSpace():
             del d, d1
         control += 1
     print("Congratulations, the game is resolved!")
+    print("")
+    print("1.) Final Solution (in steps taken)")
+    print("2.) Final Solution (in coordinates)")
+    print("3.) Take me back to the Main Menu")
     
     # translate picks to coordinates
     final_coordinates = []
@@ -112,10 +116,10 @@ def StateSpace():
     def final_answer():
         while True:
             try:
-                question = int(input('Out of these options\(1,2,3), which is your favourite?'))
+                question = int(input('Answer: '))
                 break
             except:
-                print("That's not a valid option!")
+                print("Invalid option. Please try again.")
             
         if question == 1:
             print(picks)
@@ -123,7 +127,7 @@ def StateSpace():
             print(final_coordinates)
         if question == 3:
             from main import main
-            main()      
+            main()  
         else:
             final_answer()
     final_answer()

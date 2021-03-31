@@ -202,15 +202,44 @@ def HeuristicsResolution():
     if impossible != 100:
         print("")
         print("Congratulations, the game is resolved!")
+        print("Here are your options:")
+        print("1.) Final Solution (in steps taken)")
+        print("2.) Final Solution (in coordinates)")
+        print("3.) Take me back to the Main Menu")
+        print("")
         final_coordinates = []
         for x in final_solution:
             pick = x
             coordinates = translate(pick)
             final_coordinates.append(coordinates)
+        """
         print("To win this game, you must press the following buttons in this specific order:", final_solution)
         print("To be even more clear, you must press the buttons on the following coordinates: ")
         for x in final_coordinates:
             print(x)
+        """
+        # print final answer
+        def final_answer():
+            while True:
+                try:
+                    question = int(input("Answer: "))
+                    break
+                except:
+                    print("Invalid option. Please try again.")
+                
+            if question == 1:
+                print(final_solution)
+            if question == 2:
+                print(final_coordinates)
+            if question == 3:
+                from main import main
+                main()      
+            else:
+                final_answer()
+        final_answer()
+
+        # final_solution
+        # final_coordinates
     else:
         print("")
         print("This is not a possible game to solve!")
