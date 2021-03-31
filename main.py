@@ -1,3 +1,6 @@
+# made by Thiago M Nóbrega
+# to run this project: python main.py
+
 def main():
     print("")
     print("Hello and Welcome to this Lights Out Solver!")

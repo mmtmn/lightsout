@@ -1,6 +1,9 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
 
+# tests where made here, lots of them erased, but figured to leave them here commented out :)
+
+"""
 obj = [[] for i in range(10000)]
 a,b,c=1,2,3
 obj[0].append(a)
@@ -12,7 +15,7 @@ control = 0
 for x in range(10):
     print(obj[0][control])
     control += 1
-    
+"""
 
 #x = 0
 #for x in range(100):

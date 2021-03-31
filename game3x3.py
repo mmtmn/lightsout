@@ -1,3 +1,6 @@
+# made by Thiago M Nóbrega
+# to run this project: python main.py
+
 import numpy as np
 
 def play(game, pick):
