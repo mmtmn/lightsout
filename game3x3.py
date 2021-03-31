@@ -2,8 +2,9 @@
 # to run this project: python main.py
 
 def play(game, pick):
-    """
-    This is the set of all possible actions
+    """ This is the set of all possible actions,
+        everytime a play is made this function is called
+        the new state of the game is returned
     """
 
     # btn1

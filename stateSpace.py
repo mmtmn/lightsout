@@ -1,23 +1,22 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
 
-import sys
-sys.setrecursionlimit(1500)
-
 import numpy as np
 from game3x3 import play
 from translator3x3 import translate
 
 print("")
-print("1 - First open the following website on your browser of choice:") 
-print("https://www.geogebra.org/m/JexnDJpt#material/RmRUx8Yd")
+print("We will be solving a 5 by 5 lights out puzzle")
 print("")
-print("We will be solving a 3 by 3 lights out puzzle")
-print("2 - First click on the button 'restart' and than on 'random'.")
-print("3 - Next, please enter the inputs of each row")
-print("4 - 1 is equal to a light on, and a zero is equal to a light off")
-print("5 - There should be 5 numbers per row.")
-print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
+print("Instructions:")
+print("")
+print("1.) First open the following website on your browser of choice:") 
+print("https://www.geogebra.org/m/JexnDJpt#material/uMG8BYsH")
+print("2.) Now, click on the button 'restart' and than on 'random'.")
+print("3.) Next, please enter the inputs of each row")
+print("4.) The inputs should be either 1 or 0. The number 1 is equal to a light on, and a zero is equal to a light off")
+print("5.) There should be 5 numbers per row.")
+print("6 - Please enter each of the inputs of the lights out game, by row, separating each value by a space, when finished, please press enter...")
 
 def StateSpace():
     """ This function solves the game by using states of spaces
