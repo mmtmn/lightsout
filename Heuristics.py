@@ -4,6 +4,7 @@
 import numpy as np
 from game5x5 import play
 from translator5x5 import translate
+import os
 
 print("")
 print("We will be solving a 5 by 5 lights out puzzle")
@@ -336,6 +337,9 @@ def HeuristicsResolution():
     if impossible != 100:
         print("")
         print("Congratulations, the game is resolved!")
+        print("Amount of plays made until game was beaten", len(final_solution))
+        print("")
+
         print("Here are your options:")
         print("")
         print("1.) Final Solution (in steps taken)")
@@ -364,10 +368,13 @@ def HeuristicsResolution():
                     print("")
                 
             if question == 1:
+                os.system('cls || clear')
                 print(final_solution)
             if question == 2:
+                os.system('cls || clear')
                 print(final_coordinates)
             if question == 3:
+                os.system('cls || clear')
                 from main import main
                 main()      
             else:
