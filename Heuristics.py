@@ -203,6 +203,7 @@ def HeuristicsResolution():
         print("")
         print("Congratulations, the game is resolved!")
         print("Here are your options:")
+        print("")
         print("1.) Final Solution (in steps taken)")
         print("2.) Final Solution (in coordinates)")
         print("3.) Take me back to the Main Menu")
@@ -212,12 +213,7 @@ def HeuristicsResolution():
             pick = x
             coordinates = translate(pick)
             final_coordinates.append(coordinates)
-        """
-        print("To win this game, you must press the following buttons in this specific order:", final_solution)
-        print("To be even more clear, you must press the buttons on the following coordinates: ")
-        for x in final_coordinates:
-            print(x)
-        """
+
         # print final answer
         def final_answer():
             while True:
@@ -225,7 +221,13 @@ def HeuristicsResolution():
                     question = int(input("Your choice: "))
                     break
                 except:
+                    print("")
                     print("Invalid option. Please try again.")
+                    print("")
+                    print("1.) Final Solution (in steps taken)")
+                    print("2.) Final Solution (in coordinates)")
+                    print("3.) Take me back to the Main Menu")
+                    print("")
                 
             if question == 1:
                 print(final_solution)
@@ -235,11 +237,16 @@ def HeuristicsResolution():
                 from main import main
                 main()      
             else:
+                print("")
+                print("Invalid option. Please try again.")
+                print("")
+                print("1.) Final Solution (in steps taken)")
+                print("2.) Final Solution (in coordinates)")
+                print("3.) Take me back to the Main Menu")
+                print("")
                 final_answer()
         final_answer()
 
-        # final_solution
-        # final_coordinates
     else:
         print("")
         print("This is not a possible game to solve!")

@@ -1,7 +1,17 @@
 # made by Thiago M Nóbrega
 # to run this project: python main.py
 
-# tests where made here, lots of them erased, but figured to leave them here commented out :)
+
+"""
+tests were made here, lots of them erased, 
+but figured to leave them here, commented out,
+for possible future use
+"""
+
+
+
+
+
 
 """
 obj = [[] for i in range(10000)]

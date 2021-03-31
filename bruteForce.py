@@ -77,16 +77,15 @@ def BruteForce():
             print("1.) Final Solution (in steps taken)")
             print("2.) Final Solution (in coordinates)")
             print("3.) Take me back to the Main Menu")
+            print("")
+
+            # translate picks (or steps) to coordinates
             final_coordinates = []
             for x in game_states:
                 pick = x
                 coordinates = translate(pick)
                 final_coordinates.append(coordinates)
-            """
-            print("To win this game, you must press the following buttons in this specific order:", game_states)
-            print("To be even more clear, you must press the buttons on the following coordinates: ")
-            print(final_coordinates)
-            """
+
             # print final answer
             def final_answer():
                 while True:
@@ -94,7 +93,13 @@ def BruteForce():
                         question = int(input('Your choice: '))
                         break
                     except:
+                        print("")
                         print("Invalid option. Please try again.")
+                        print("")
+                        print("1.) Final Solution (in steps taken)")
+                        print("2.) Final Solution (in coordinates)")
+                        print("3.) Take me back to the Main Menu")
+                        print("")
                     
                 if question == 1:
                     print(game_states)
@@ -104,8 +109,12 @@ def BruteForce():
                     from main import main
                     main()      
                 else:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("")
+                    print("1.) Final Solution (in steps taken)")
+                    print("2.) Final Solution (in coordinates)")
+                    print("3.) Take me back to the Main Menu")
+                    print("")
                     final_answer()
             final_answer()
-            #        game_states
-            #        final_coordinates
-            #break
