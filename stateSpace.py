@@ -24,40 +24,117 @@ def StateSpace():
     """
     # collecting input for inicial space's position
     # collecting row1's inputs
-    row1 = list(map(int, input("row #1: ").split()))
-    # making sure row have 5 digits
-    while len(row1) != 3:
-        row1.clear()
-        row1 = list(map(int, input("row #1: ").split()))
-    # making sure digits are either zero or one
-    if len(row1) == 3:
-        for x in row1:
-            if x != 1 and x != 0:
-                row1.clear()
+    def row1_fun():
+        while True:
+            try:
                 row1 = list(map(int, input("row #1: ").split()))
-    # collecting row2's inputs
-    row2 = list(map(int, input("row #2: ").split()))
-    while len(row2) != 3:
-        row2.clear()
-        row2 = list(map(int, input("row #2: ").split()))
-    if len(row2) == 3:
-        for x in row2:
-            if x != 1 and x != 0:
-                row2.clear()
+                break
+            except:
+                print("")
+                print("Invalid option. Please try again.")
+                print("exemple: 1 1 1 1 1")
+                print("exemple: 0 0 0 0 0")
+                print("exemple: 1 0 1 0 1")
+                print("")        
+
+        
+        while len(row1) != 3:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("")   
+            row1.clear()
+            row1 = list(map(int, input("row #1: ").split()))
+        if len(row1) == 3:
+            for x in row1:
+                if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("")   
+                    row1.clear()
+                    row1 = list(map(int, input("row #1: ").split()))
+        return row1
+    
+    def row2_fun():
+        while True:
+            try:
                 row2 = list(map(int, input("row #2: ").split()))
-    # collecting row3's inputs
-    row3 = list(map(int, input("row #3: ").split()))
-    while len(row3) != 3:
-        row3.clear()
-        row3 = list(map(int, input("row #3: ").split()))
-    if len(row3) == 3:
-        for x in row3:
-            if x != 1 and x != 0:
-                row3.clear()
+                break
+            except:
+                print("")
+                print("Invalid option. Please try again.")
+                print("exemple: 1 1 1 1 1")
+                print("exemple: 0 0 0 0 0")
+                print("exemple: 1 0 1 0 1")
+                print("")        
+
+        
+        while len(row2) != 3:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("")   
+            row2.clear()
+            row2 = list(map(int, input("row #2: ").split()))
+        if len(row2) == 3:
+            for x in row2:
+                if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
+                    row2.clear()
+                    row2 = list(map(int, input("row #2: ").split()))
+        return row2
+    
+    def row3_fun():
+        while True:
+            try:
                 row3 = list(map(int, input("row #3: ").split()))
-   
+                break
+            except:
+                print("")
+                print("Invalid option. Please try again.")
+                print("exemple: 1 1 1 1 1")
+                print("exemple: 0 0 0 0 0")
+                print("exemple: 1 0 1 0 1")
+                print("")        
+
+        
+        while len(row3) != 3:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("") 
+            row3.clear()
+            row3 = list(map(int, input("row #3: ").split()))
+        if len(row3) == 3:
+            for x in row3:
+                if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
+                    row3.clear()
+                    row3 = list(map(int, input("row #3: ").split()))
+        return row3
+
+
     # all the data was collected for the inicial spacial state
-    rows = [row1,row2,row3]
+    rows = [row1_fun(),row2_fun(),row3_fun()]
     # turning the rows into a 5x5 numpy array
     game = np.array(rows)
     sets = []

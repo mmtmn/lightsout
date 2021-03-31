@@ -40,11 +40,23 @@ def HeuristicsResolution():
 
         
         while len(row1) != 5:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("")   
             row1.clear()
             row1 = list(map(int, input("row #1: ").split()))
         if len(row1) == 5:
             for x in row1:
                 if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("")   
                     row1.clear()
                     row1 = list(map(int, input("row #1: ").split()))
         return row1
@@ -64,11 +76,23 @@ def HeuristicsResolution():
 
         
         while len(row2) != 5:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("")   
             row2.clear()
             row2 = list(map(int, input("row #2: ").split()))
         if len(row2) == 5:
             for x in row2:
                 if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
                     row2.clear()
                     row2 = list(map(int, input("row #2: ").split()))
         return row2
@@ -88,11 +112,23 @@ def HeuristicsResolution():
 
         
         while len(row3) != 5:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("") 
             row3.clear()
             row3 = list(map(int, input("row #3: ").split()))
         if len(row3) == 5:
             for x in row3:
                 if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
                     row3.clear()
                     row3 = list(map(int, input("row #3: ").split()))
         return row3
@@ -112,11 +148,23 @@ def HeuristicsResolution():
 
         
         while len(row4) != 5:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("") 
             row4.clear()
             row4 = list(map(int, input("row #4: ").split()))
         if len(row4) == 5:
             for x in row4:
                 if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
                     row4.clear()
                     row4 = list(map(int, input("row #4: ").split()))
         return row4
@@ -136,11 +184,23 @@ def HeuristicsResolution():
 
         
         while len(row5) != 5:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("") 
             row5.clear()
             row5 = list(map(int, input("row #5: ").split()))
         if len(row5) == 5:
             for x in row5:
                 if x != 1 and x != 0:
+                    print("")
+                    print("Invalid option. Please try again.")
+                    print("exemple: 1 1 1 1 1")
+                    print("exemple: 0 0 0 0 0")
+                    print("exemple: 1 0 1 0 1")
+                    print("") 
                     row5.clear()
                     row5 = list(map(int, input("row #5: ").split()))
         return row5
