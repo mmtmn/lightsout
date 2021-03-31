@@ -13,7 +13,7 @@ def main():
     print("4. exit")
     print("")
     print("")
-    x = int(input("You choice: "))
+    x = int(input("Your choice: "))
     if x == 1:
         from stateSpace import StateSpace
         StateSpace()
