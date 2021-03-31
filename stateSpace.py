@@ -61,15 +61,17 @@ def StateSpace():
     # turning the rows into a 5x5 numpy array
     game = np.array(rows)
     sets = []
+
+    # overkill of lists
     lists = [[] for i in range(10000)]
     lists1 = [[] for i in range(10000)]
     # --- copies and appends np array ---
     c = np.copy(game)
+    # turns numpy array into string so I can compare them  
     c1 = np.array2string(c)
     lists[0].append(c1)
     lists1[0].append(c)
     sets_values = []
-    #print(lists[0])
     sets.append(c1)
     sets_values.append(c)
     control = 0
@@ -106,12 +108,22 @@ def StateSpace():
         coordinates = translate(pick)
         final_coordinates.append(coordinates)
 
-    # print final answer 
-    print("here is the sequence to follow to beat this game:")
-    print("")
-    print(picks)
-    print("To be even more clear, you must press the buttons on the following coordinates: ")
-    print(final_coordinates)
+    # print final answer
+    def final_answer():
+        final = int(input("1, 2 or 3? "))
+        while final != 1 or 2 or 3:
+            if final == 1:
+                print(picks)
+            if final == 2:
+                print(final_coordinates)
+            if final == 3:
+                from main import main
+                main()
+                
+            else:
+                final_answer()
+    final_answer()
+            
 
 
 
@@ -119,7 +131,7 @@ def StateSpace():
 
     # attempts to solve state space logic
 
-    
+
     """for x in picks:
         print(x)
         print("")"""
