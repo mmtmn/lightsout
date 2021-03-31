@@ -112,6 +112,14 @@ def StateSpace():
     print(picks)
     print("To be even more clear, you must press the buttons on the following coordinates: ")
     print(final_coordinates)
+
+
+
+
+
+    # attempts to solve state space logic
+
+    
     """for x in picks:
         print(x)
         print("")"""
