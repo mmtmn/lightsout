@@ -222,7 +222,7 @@ def HeuristicsResolution():
         def final_answer():
             while True:
                 try:
-                    question = int(input("Answer: "))
+                    question = int(input("Your choice: "))
                     break
                 except:
                     print("Invalid option. Please try again.")
