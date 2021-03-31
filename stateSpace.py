@@ -74,15 +74,15 @@ def StateSpace():
     sets_values.append(c)
     control = 0
     
-    # --- sets inicial pick for game ---
-    
+    # --- state space core logic ---
+    picks = []
     while np.count_nonzero(game):
         game = lists1[0][control]
         pick = 1
+        picks.append(pick)
         for pick in range(9):
             pick += 1
-            
-            #print(pick)
+            picks.append(pick)
             play(game,pick)
             d = np.copy(game)
             print(d)
@@ -97,6 +97,24 @@ def StateSpace():
                 pass
             del d, d1
         control += 1
+    print("Congratulations, the game is resolved!")
+    
+    # translate picks to coordinates
+    final_coordinates = []
+    for x in picks:
+        pick = x
+        coordinates = translate(pick)
+        final_coordinates.append(coordinates)
+
+    # print final answer 
+    print("here is the sequence to follow to beat this game:")
+    print("")
+    print(picks)
+    print("To be even more clear, you must press the buttons on the following coordinates: ")
+    print(final_coordinates)
+    """for x in picks:
+        print(x)
+        print("")"""
     
         
         
