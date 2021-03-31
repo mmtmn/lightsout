@@ -21,7 +21,8 @@ print("5 - There should be 5 numbers per row.")
 print("6 - Please enter each of the inputs of the lights out game and separate them by a space, when finished, please press enter...")
 
 def BruteForce():
-    """ Main function of the software
+    """ This function solves the game by brute forcing randomly 
+        returns the solution while getting inputs
     """
     # collecting input for inicial space's position
     # collecting row1's inputs

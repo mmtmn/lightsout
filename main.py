@@ -2,13 +2,16 @@
 # to run this project: python main.py
 
 def main():
+    """ this is the main menu function, where the user can choose
+        which way to solve the 'lights out' game.
+    """
     print("")
     print("Hello and Welcome to this Lights Out Solver!")
     print("Made by Thiago M Nóbrega")
     print("")
     print("Options: ")
     print("1. Solve a 3x3 lights out game by states of spaces")
-    print("2. Solve a 3x3 lighstout game by random brute force")
+    print("2. Solve a 3x3 lights out game by brute forcing randomly")
     print("3. Solve a 5x5 lights out game by heuristics")
     print("4. exit")
     print("")
