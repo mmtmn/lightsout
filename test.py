@@ -9,6 +9,34 @@ for possible future use
 """
 
 
+def row1_fun():
+    while True:
+        try:
+            row1 = list(map(int, input("row #1: ").split()))
+            break
+        except:
+            print("")
+            print("Invalid option. Please try again.")
+            print("exemple: 1 1 1 1 1")
+            print("exemple: 0 0 0 0 0")
+            print("exemple: 1 0 1 0 1")
+            print("")        
+
+    
+    while len(row1) != 5:
+        row1.clear()
+        row1 = list(map(int, input("row #1: ").split()))
+    if len(row1) == 5:
+        for x in row1:
+            if x != 1 and x != 0:
+                row1.clear()
+                row1 = list(map(int, input("row #1: ").split()))
+    return row1
+
+print(row1_fun())
+
+
+
 
 
 
