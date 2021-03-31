@@ -2,7 +2,17 @@
 # to run this project: python main.py
 
 obj = [[] for i in range(10000)]
-print(obj)
+a,b,c=1,2,3
+obj[0].append(a)
+obj[0].append(b)
+print(obj[0])
+print(obj[0][0])
+
+control = 0
+for x in range(10):
+    print(obj[0][control])
+    control += 1
+    
 
 #x = 0
 #for x in range(100):

@@ -62,35 +62,45 @@ def StateSpace():
     game = np.array(rows)
     sets = []
     lists = [[] for i in range(10000)]
+    lists1 = [[] for i in range(10000)]
     # --- copies and appends np array ---
     c = np.copy(game)
     c1 = np.array2string(c)
     lists[0].append(c1)
+    lists1[0].append(c)
     sets_values = []
     #print(lists[0])
     sets.append(c1)
     sets_values.append(c)
+    control = 0
     
     # --- sets inicial pick for game ---
     
-    pick = 1
-    for pick in range(9):
-        pick += 1
-        
-        print(pick)
-        play(game,pick)
-        d = np.copy(game)
-        print(d)
-        d1 = np.array2string(d)
-        
-        if d1 not in sets:
-            sets.append(d1)
-            sets_values.append(d)
-            lists[0].append(d1)
-        else:
-            print("broken")
-        del d, d1
+    while np.count_nonzero(game):
+        game = lists1[0][control]
+        pick = 1
+        for pick in range(9):
+            pick += 1
+            
+            #print(pick)
+            play(game,pick)
+            d = np.copy(game)
+            print(d)
+            d1 = np.array2string(d)
+            
+            if d1 not in sets:
+                sets.append(d1)
+                sets_values.append(d)
+                lists[0].append(d1)
+                lists1[0].append(d)
+            else:
+                pass
+            del d, d1
+        control += 1
     
+        
+        
+    """    
     print("sets_values:")
     # set_values has the np array
     for x in sets_values:
@@ -103,11 +113,8 @@ def StateSpace():
         print("")
         print(x)
 
-    print("lists[0]:")
-    # lists[] has the total memory of all np arrays as strings
-    for x in lists[0]:
-        print("")
-        print(x)
+    """
+
 
 
 
