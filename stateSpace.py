@@ -110,18 +110,22 @@ def StateSpace():
 
     # print final answer
     def final_answer():
-        final = int(input("1, 2 or 3? "))
-        while final != 1 or 2 or 3:
-            if final == 1:
-                print(picks)
-            if final == 2:
-                print(final_coordinates)
-            if final == 3:
-                from main import main
-                main()
-                
-            else:
-                final_answer()
+        while True:
+            try:
+                question = int(input('Out of these options\(1,2,3), which is your favourite?'))
+                break
+            except:
+                print("That's not a valid option!")
+            
+        if question == 1:
+            print(picks)
+        if question == 2:
+            print(final_coordinates)
+        if question == 3:
+            from main import main
+            main()      
+        else:
+            final_answer()
     final_answer()
             
 
