@@ -9,7 +9,7 @@ import os
 
 
 print("")
-print("We will be solving a 5 by 5 lights out puzzle")
+print("We will be solving a 3 by 3 lights out puzzle")
 print("")
 print("Instructions:")
 print("")
